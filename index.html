@@ -351,6 +351,40 @@ details.more .list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .sheet-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;padding-top:4px}
 .sheet-actions .left{margin-right:auto}
 .err{color:var(--late);font-weight:700;font-size:.88rem}
+.cta-band.cla-band{background:linear-gradient(120deg,#14213D,#2B3F8F)}
+.cla-band .btn-cta{display:inline-flex;align-items:center;gap:8px}
+.cla-band .btn-cta svg,.cla-mic svg{width:18px;height:18px}
+.cla-note{min-height:46vh!important;font-size:1rem;line-height:1.5}
+.cla-tip{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;color:var(--muted);font-size:.88rem;line-height:1.45}
+.cla-tip b{color:var(--ink)}
+.cla-foot{position:sticky;bottom:0;z-index:2;background:var(--bg);border-top:1px solid var(--line);padding:12px max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 12px) max(16px,env(safe-area-inset-left,0px));display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.cla-foot .btn{flex:1;min-width:140px;padding:13px 14px;font-size:.95rem}
+.cla-mic{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.cla-mic.rec{background:var(--cta);border-color:var(--cta);color:var(--cta-ink)}
+.cla-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
+.cla-card.off{opacity:.5}
+.panel-wrap.still,.panel-wrap.still .panel{animation:none!important}
+.cla-card.off .cla-b{display:none}
+.cla-h{display:flex;gap:10px;align-items:flex-start}
+.cla-h input[type=checkbox]{width:22px;height:22px;margin-top:6px;accent-color:var(--accent);flex:none}
+.cla-t{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+.cla-name{font-family:var(--f-display);font-weight:800;font-size:1.12rem;border:1px solid transparent;background:transparent;border-radius:8px;padding:2px 4px;width:100%;color:var(--ink)}
+.cla-name:focus{border-color:var(--line);background:var(--surface-2)}
+.cla-t select{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-weight:700;font-size:.8rem;max-width:100%}
+.cla-tag{align-self:flex-start;font-size:.72rem;font-weight:800;border-radius:999px;padding:3px 9px;text-transform:uppercase;letter-spacing:.04em}
+.cla-tag.new{background:var(--cta);color:var(--cta-ink)}
+.cla-tag.upd{background:var(--accent);color:var(--accent-ink)}
+.cla-b{display:flex;flex-direction:column;gap:10px}
+.cla-b h4{margin:6px 0 -2px;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.cla-was{font-size:.75rem;color:var(--muted)}
+.cla-sum{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:30px 10px}
+.cla-sum .big{font-size:2.6rem}
+.cla-sum b{font-family:var(--f-display);font-size:1.3rem}
+.cla-load{display:flex;flex-direction:column;align-items:center;gap:14px;padding:50px 10px;color:var(--muted);text-align:center}
+.cla-dot{width:54px;height:54px;border-radius:50%;background:linear-gradient(120deg,#14213D,#2B3F8F);display:grid;place-items:center;color:#fff;animation:claP 1.2s ease-in-out infinite}
+.cla-dot svg{width:26px;height:26px}
+@keyframes claP{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@media (prefers-reduced-motion:reduce){.cla-dot{animation:none}}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 142px);z-index:30;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:700;font-size:.88rem;max-width:calc(100% - 32px);text-align:center;box-shadow:var(--shadow)}
 /* assistant */
 .ai-btn{display:inline-flex;align-items:center;gap:6px;background:var(--cta);color:#fff;border:0;border-radius:999px;padding:7px 13px;font-weight:800;font-size:.82rem;box-shadow:0 4px 14px rgba(255,61,110,.35)}
@@ -488,6 +522,16 @@ nav.bottom .tab[aria-current="page"] svg{background:var(--accent-soft);border-ra
   .grid2>.marge{grid-column:span 1}
   .kpis{grid-template-columns:repeat(4,1fr)}
 }
+.scope{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.scope button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-weight:800;font-size:.82rem;color:var(--muted)}
+.scope button[aria-pressed="true"]{background:#14213D;border-color:#14213D;color:#fff}
+.scope span{margin-left:auto;font-size:.78rem;color:var(--muted);font-weight:700}
+.own{font-size:.72rem;font-weight:800;color:var(--violet);background:var(--violet-soft);border-radius:999px;padding:1px 7px}
+.team-rows{display:flex;flex-direction:column;gap:10px}
+.team-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}
+.tr-main{display:flex;flex-direction:column;gap:3px;min-width:0}.tr-main small,.tr-fig small{color:var(--muted);font-size:.76rem}
+.tr-fig{text-align:right;display:flex;flex-direction:column}.tr-fig b{font-family:var(--f-display);font-size:1.1rem}
+.mg-obj-bar.light{background:var(--surface-2);height:6px}
 </style>
 </head>
 <body>
@@ -499,7 +543,7 @@ nav.bottom .tab[aria-current="page"] svg{background:var(--accent-soft);border-ra
         <svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FF3D6E"/><stop offset=".55" stop-color="#FF6A3D"/><stop offset="1" stop-color="#FFB13B"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#lg)"/><rect x="11" y="28" width="5.5" height="9" rx="1.6" fill="#fff" fill-opacity=".55"/><rect x="19.5" y="22" width="5.5" height="15" rx="1.6" fill="#fff" fill-opacity=".75"/><rect x="28" y="16" width="5.5" height="21" rx="1.6" fill="#fff"/><path d="M10 24.5 21 14l6 5 11-10" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M31.5 8.6h7v7" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div class="brand-txt"><b>Deal<em>Flow</em></b></div>
       </div>
-      <div class="refresh"><button class="ai-btn" id="ai-top" type="button" data-openchat="1" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.9z"/></svg>Assistant</button><span id="updated"></span><button class="btn-ghost" id="reload" type="button">Actualiser</button></div>
+      <div class="refresh"><button class="ai-btn" id="ai-top" type="button" data-openchat="1" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.9z"/></svg>Claudia</button><span id="updated"></span><button class="btn-ghost" id="reload" type="button">Actualiser</button></div>
     </div>
     <nav class="tabs-top" id="tabs-top" aria-label="Sections"></nav>
     <div class="spacer-b"></div>
@@ -512,11 +556,12 @@ nav.bottom .tab[aria-current="page"] svg{background:var(--accent-soft);border-ra
 
 <nav class="bottom" id="tabs-bottom" aria-label="Sections"></nav>
 <button class="fab" id="fab" type="button" hidden>+ Action</button>
-<button class="ai-fab" id="ai-fab" type="button" data-openchat="1" aria-label="Ouvrir l'assistant" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></button>
+<button class="ai-fab" id="ai-fab" type="button" data-openchat="1" aria-label="Ouvrir Claudia" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></button>
 <div id="fiche-root"></div>
 <div id="call-root"></div>
 <div id="mail-root"></div>
 <div id="chat-root"></div>
+<div id="cla-root"></div>
 <div id="modal-root"></div>
 <div id="toast-root"></div>
 
@@ -524,10 +569,11 @@ nav.bottom .tab[aria-current="page"] svg{background:var(--accent-soft);border-ra
 (function(){
 const SHEET_ID="1q66Zrx6R3RKbbi8TqyJM80qE3ibttDd9CBds_4Pe8_c";
 const SERVER="Google Sheets";
-const J_RANGE="'Journal (base)'!A2:J";
-const C_RANGE="Comptes!A3:Y";
+const J_RANGE="'Journal (base)'!A2:K";
+const C_RANGE="Comptes!A3:Z";
+const U_RANGE="Utilisateurs!A2:F";
 const L_RANGE="Listes!A2:H";
-const USER="Mehdi";
+let USER="Mehdi";
 let L={types:["Visite physique","Appel téléphonique","Mail","Relance mail","RDV découverte","Remise d'offre","Transfert à Valérie"],
   statuts:["À qualifier","Intéressé","RDV fixé","Proposition envoyée","Négociation","En signature","Gagné","Perdu","En veille"],
   besoins:["Téléphonie","IA","Réseau / Infra","GED","Impression","Facturation électronique","Multi-besoins"],
@@ -617,6 +663,7 @@ async function api(method,payload){
   return j;
 }
 async function getRange(range){const j=await api("GET",{range});return Array.isArray(j.values)?j.values:[]}
+async function apiMe(){const j=await api("POST",{op:"me"});return j.me||null}
 async function setRange(range,values){return api("POST",{op:"set",range,values})}
 function errorCopy(e,writing){
   const c=e&&e.code;
@@ -632,12 +679,25 @@ function errorCopy(e,writing){
   if(c==="server_unavailable")return["Google Sheets ne répond pas","Réessaie dans quelques secondes avec Actualiser."];
   return["Erreur Google Sheets",(e&&e.message)?String(e.message).slice(0,240):"Réessaie avec Actualiser."];
 }
+async function getMe(){return apiMe()}
+function scopeBar(){if(!multi())return "";const sc=S.scope||"moi";return `<div class="scope"><button type="button" data-scope="moi" aria-pressed="${sc==="moi"}">👤 Mes comptes</button><button type="button" data-scope="equipe" aria-pressed="${sc!=="moi"}">👥 Équipe</button>${S.me?`<span>${esc(S.me.name)} · ${esc(S.me.role)}</span>`:""}</div>`}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-scope]");if(b){S.scope=b.dataset.scope;try{localStorage.setItem("df-scope",S.scope)}catch(err){}if(typeof MAP!=="undefined"&&MAP){try{MAP.remove()}catch(err){}MAP=null}render()}});
+function applyMe(){
+  const me=S.me;if(!me)return;USER=me.name;if(me.rate||me.rate===0)COMM=me.rate||0;if(me.obj)S.objectif=me.obj;
+  if(!S.scope){let sv=null;try{sv=localStorage.getItem("df-scope")}catch(e){}S.scope=sv||(me.role==="Manager"?"equipe":"moi")}
+}
+const isMgr=()=>!!(S.me&&S.me.role==="Manager");
+const multi=()=>(S.users||[]).length>1;
+const rateOf=c=>{const u=(S.users||[]).find(x=>x.name===(c.owner||USER));return u?u.rate:COMM};
 async function load(retried,silent){
   if(S.busy&&!retried)return;S.busy=true;updRefresh();
   try{
-    const[j,c,l,o]=await Promise.all([getRange(J_RANGE),getRange(C_RANGE),getRange(L_RANGE).catch(()=>null),getRange("Listes!I2").catch(()=>null)]);
+    const[j,c,l,o,u,me]=await Promise.all([getRange(J_RANGE),getRange(C_RANGE),getRange(L_RANGE).catch(()=>null),getRange("Listes!I2").catch(()=>null),getRange(U_RANGE).catch(()=>null),getMe().catch(()=>null)]);
+    if(u)S.users=u.map((r,i)=>({name:norm(r[0]),role:norm(r[1])||"Commercial",rate:num(r[3])/100,obj:num(r[4]),row:i+2,active:String(r[5]).toUpperCase()!=="FALSE"})).filter(x=>x.name&&x.active);
+    S.me=me||S.users.find(x=>x.name===USER)||null;
     S.journal=j;S.comptes=c;S.loaded=true;S.error=null;S.fetchedAt=new Date();S.cached=false;
     if(o)S.objectif=num(o[0]&&o[0][0]);
+    applyMe();
     if(l&&l.length){const col=k=>l.map(r=>norm(r[k])).filter(Boolean);const t=col(0),s=col(1),b=col(2),r=col(3),p=col(4);
       if(t.length)L.types=t;if(s.length)L.statuts=s;if(b.length)L.besoins=b;if(r.length)L.resultats=r;if(p.length)L.prios=p;L.secteurs=col(5);L.villes=col(6);L.fonctions=col(7)}
   }catch(e){
@@ -645,25 +705,27 @@ async function load(retried,silent){
     if(!silent||!S.loaded)S.error=e;
   }
   S.busy=false;
-  if(!S.error&&!S.cached){try{localStorage.setItem("df-cache",JSON.stringify({t:S.fetchedAt.getTime(),j:S.journal,c:S.comptes,L,o:S.objectif||0}))}catch(e){}}
+  if(!S.error&&!S.cached){try{localStorage.setItem("df-cache",JSON.stringify({t:S.fetchedAt.getTime(),j:S.journal,c:S.comptes,L,o:S.objectif||0,u:S.users,me:S.me}))}catch(e){}}
   if(silent&&(document.querySelector("#modal-root .overlay")||(document.activeElement&&/^(c-q|j-q)$/.test(document.activeElement.id)))){updRefresh();return}
   render();
 }
 
 /* ---------- model ---------- */
 function build(){
-  const C=new Map(),Clist=[];
+  const C=new Map();let Clist=[];
   S.comptes.forEach((r,i)=>{const n=norm(r[0]);if(!n||C.has(n))return;
-    const o={row:i+3,name:n,secteur:norm(r[1]),ville:norm(r[2]),adresse:norm(r[3]),visite:norm(r[4]),contact:norm(r[5]),fonction:norm(r[6]),tel:norm(r[7]),email:norm(r[8]),besoin:norm(r[9]),presta:norm(r[10]),echeance:norm(r[11]),prio:norm(r[12]),statut:norm(r[13]),comment:norm(r[14]),pot:num(r[22]),signe:num(r[23]),dsig:parseDate(r[24]),rows:[],tasks:[],last:null,next:null};
+    const o={row:i+3,name:n,secteur:norm(r[1]),ville:norm(r[2]),adresse:norm(r[3]),visite:norm(r[4]),contact:norm(r[5]),fonction:norm(r[6]),tel:norm(r[7]),email:norm(r[8]),besoin:norm(r[9]),presta:norm(r[10]),echeance:norm(r[11]),prio:norm(r[12]),statut:norm(r[13]),comment:norm(r[14]),pot:num(r[22]),signe:num(r[23]),dsig:parseDate(r[24]),owner:norm(r[25]),rows:[],tasks:[],last:null,next:null};
     C.set(n,o);Clist.push(o)});
-  const J=S.journal.map((r,i)=>({row:i+2,a:parseDate(r[0]),s:norm(r[1]),c:norm(r[2]),d:norm(r[3]),e:norm(r[4]),f:norm(r[5]),g:norm(r[6]),h:parseDate(r[7]),i:norm(r[8]),done:String(r[9]).toUpperCase()==="TRUE"||r[9]===true})).filter(r=>r.s);
+  const J=S.journal.map((r,i)=>({row:i+2,a:parseDate(r[0]),s:norm(r[1]),c:norm(r[2]),d:norm(r[3]),e:norm(r[4]),f:norm(r[5]),g:norm(r[6]),h:parseDate(r[7]),i:norm(r[8]),done:String(r[9]).toUpperCase()==="TRUE"||r[9]===true,by:norm(r[10])})).filter(r=>r.s);
   const cutoff=new Date(2026,9,15),weekAgo=addDays(-7);
   const tasks=[],done=[],lastNote=new Map();
   const st=n=>(C.get(n)||{}).statut||"";
+  const mine=c=>!c||!c.owner||c.owner===USER,vis=c=>!multi()||S.scope!=="moi"||mine(c);
   J.forEach((r,idx)=>{
     if(r.e)lastNote.set(r.s,r.e);
     const co=C.get(r.s);if(co){co.rows.push(r);co.last=r}
     const s=st(r.s);if(s==="Gagné"||s==="Perdu")return;
+    if(!vis(C.get(r.s)))return;
     if(r.h){let sup=false;
       if(r.g){const own=r.a?r.a.getTime():0;for(let k=idx+1;k<J.length;k++){const o=J[k];if(o.s===r.s&&o.d===r.g&&(o.a?o.a.getTime():0)>=own){sup=true;break}}}
       if(!sup)tasks.push({id:"P"+r.row,kind:"P",row:r.row,date:r.h,time:r.i,company:r.s,action:r.g||"Action",contact:r.c})}
@@ -676,10 +738,12 @@ function build(){
   done.sort((x,y)=>(y.date-x.date)||(y.row-x.row));
   const g={late:[],today:[],week:[],later:[]};
   tasks.forEach(t=>{t.group=grp(t.date);g[t.group].push(t);const co=C.get(t.company);if(co){co.tasks.push(t);if(!co.next)co.next=t}});
+  const ClistAll=Clist;Clist=Clist.filter(vis);
   const aPlanifier=Clist.filter(c=>!ACTIVE_OUT.includes(c.statut)&&!c.next);
   const calls=[...g.late,...g.today].filter(t=>/Appel/.test(t.action));
   const mails=[...g.late,...g.today].filter(t=>/mail/i.test(t.action));
-  return{C,Clist,J,lastNote,g,done,all:tasks,aPlanifier,calls,mails};
+  const Jv=J.filter(r=>vis(C.get(r.s)));
+  return{C,Clist,ClistAll,mine,J:Jv,Jall:J,lastNote,g,done,all:tasks,aPlanifier,calls,mails};
 }
 
 /* ---------- pieces ---------- */
@@ -711,7 +775,7 @@ function crow(c){
   const nl=nextLabel(c),cls=c.next?c.next.group:(nl?"late":"");
   return `<button class="crow" type="button" data-fiche="${esc(c.name)}">${av(c.name)}
     <span class="nm">${c.prio?`<i class="prio ${esc(c.prio)}" title="${esc(c.prio)}"></i>`:""}${esc(c.name)}</span>${stChip(c.statut)||"<span></span>"}
-    <span class="sub">${[c.ville,c.besoin,c.contact].filter(Boolean).map(esc).join(" · ")}${c.signe?` <b class="eur ok">${esc(keur(c.signe))}</b>`:c.pot?` <b class="eur">${esc(keur(c.pot))}</b>`:""}${nl?` <span class="when ${cls}">${esc(nl)}</span>`:""}</span></button>`;
+    <span class="sub">${multi()&&S.scope!=="moi"&&c.owner?`<span class="own">${esc(c.owner)}</span>`:""}${[c.ville,c.besoin,c.contact].filter(Boolean).map(esc).join(" · ")}${c.signe?` <b class="eur ok">${esc(keur(c.signe))}</b>`:c.pot?` <b class="eur">${esc(keur(c.pot))}</b>`:""}${nl?` <span class="when ${cls}">${esc(nl)}</span>`:""}</span></button>`;
 }
 const kpi=(icon,cls,v,l,nav)=>`<button class="kpi ${cls}" type="button" data-nav="${nav}"><span class="ic">${svg(icon,2.2)}</span><b data-count="${v}">${v}</b><span>${l}</span></button>`;
 function bars(items,color){const max=Math.max(1,...items.map(i=>i[1]));return `<div class="bars">${items.map(([k,v,c])=>`<div class="bar"><span>${esc(k)}</span><span class="tr"><span class="fl" style="width:${(v/max*100).toFixed(1)}%;--c:var(--${c||color||"sea"})"></span></span><b>${v}</b></div>`).join("")}</div>`}
@@ -733,6 +797,7 @@ function vAccueil(){
   const hot=M.Clist.filter(c=>HOT.includes(c.statut)||(c.prio==="Chaud"&&!ACTIVE_OUT.includes(c.statut))).sort((a,b)=>stIdx(b.statut)-stIdx(a.statut)).slice(0,7);
   return `<div class="hero-row"><div class="hello"><h1>${hello} ${USER}</h1><p>${t.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})} · ${summary}</p></div>${activityRing()}</div>
   ${tipCard()}
+  ${claudiaOn()?`<div class="cta-band cla-band"><div><b>Claudia · Note terrain</b><span>Dicte ta tournée en vrac. Claudia crée les fiches, les actions et les relances, tu n'as plus qu'à valider.</span></div><button class="btn-cta" type="button" data-openclaudia="1">${MIC}Dicter</button></div>`:""}
   ${margeTop()}
   <div class="kpis">
     ${kpi("late","k-coral",M.g.late.length,"En retard","journee")}${kpi("sun","k-sun",M.g.today.length,"Aujourd'hui","journee")}
@@ -744,6 +809,7 @@ function vAccueil(){
   <div class="cta-band mail-band"><div><b>Session mailing</b><span>${M.mails.length?`${plural(M.mails.length,"mail","mails")} à envoyer, rédigés pour chaque prospect à partir de sa fiche et de ton historique.`:"Aucun mail prévu aujourd'hui. Tu peux en rédiger un depuis n'importe quelle fiche compte."}</span></div><button class="btn-cta" type="button" data-startmail="1" ${M.mails.length?"":"disabled"}>Démarrer</button></div>
   <div class="grid2">
     ${margeCard()}
+    ${teamCard()}
     <div class="card"><div class="g-head"><h3>Au programme</h3><button class="lnk" type="button" data-nav="journee">Ma journée →</button></div>
       ${todayList.length?`<div class="mini">${todayList.slice(0,7).map(x=>`<button type="button" data-fiche="${esc(x.company)}">${av(x.company)}<span><b>${esc(x.company)}</b><small>${esc(x.action)}${x.time?" · "+esc(x.time):""}</small></span><span class="when ${x.group}">${x.group==="late"?"Retard":x.time||"Auj."}</span></button>`).join("")}</div>${todayList.length>7?`<span class="mail">+ ${todayList.length-7} autres dans Ma journée</span>`:""}`:`<div class="empty">Rien de prévu aujourd'hui.</div>`}</div>
     <div class="card"><div class="g-head"><h3>Dossiers chauds</h3><button class="lnk" type="button" data-nav="pipeline">Pipeline →</button></div>
@@ -774,34 +840,48 @@ function activityRing(){
 const TIPS=["Appelle d'abord tes dossiers chauds : ton énergie du matin vaut de l'or.","Pose une question ouverte de plus que d'habitude, et tais-toi.","Une objection, c'est une demande d'information. Reformule avant de répondre.","Termine chaque échange par une prochaine étape datée.","Parle de leur problème avant de parler de ta solution.","Le « non » d'aujourd'hui est souvent un « pas maintenant ». Planifie la relance.","Cite une référence locale : rien ne rassure plus qu'un voisin satisfait.","Relance à J+2 : c'est là que la plupart abandonnent, pas toi.","Note le prénom de l'assistante : c'est elle qui ouvre la porte.","Chiffre ce que leur problème leur coûte, pas ce que ta solution coûte.","Un RDV fixé vaut dix mails envoyés.","Prépare ton accroche en 10 secondes : qui tu es, pourquoi eux, pourquoi maintenant.","Écoute 70 %, parle 30 %.","Avant de raccrocher, demande : « Qui d'autre décide avec vous ? »","Visite physique + appel le lendemain : le combo qui transforme.","Souris au téléphone, ça s'entend.","Bloque une heure sans interruption pour ta session d'appels.","Ne vends pas l'audit, vends ce qu'ils vont découvrir.","Chaque compte sans prochaine action est une vente qui s'éteint.","Termine ta journée en planifiant celle de demain."];
 function tipCard(){const t=today0(),i=Math.floor((t-new Date(t.getFullYear(),0,0))/864e5)%TIPS.length;return `<div class="tip"><span>💡</span><p><b>Conseil du jour · </b>${esc(TIPS[i])}</p></div>`}
 document.addEventListener("click",e=>{if(e.target.closest("[data-daygoal]")&&M){openSheet("Objectif d'actions par jour","Appels, visites, mails… tout ce que tu enregistres compte.",inp("g-val","Nombre d'actions visé chaque jour",dayGoal(),'inputmode="numeric"'),{save:"Enregistrer",onSave:()=>{const v=Math.max(1,Math.round(num(val("g-val")))||15);try{localStorage.setItem("df-daygoal",String(v))}catch(err){}closeSheet();toast("Objectif : "+v+" actions par jour");render()}})}});
+function teamCard(){
+  if(!isMgr()||!multi())return "";
+  const t=today0(),w0=monday(t),m0=new Date(t.getFullYear(),t.getMonth(),1);
+  const rows=(S.users||[]).filter(u=>u.role!=="Manager").map(u=>{
+    const cs=M.ClistAll.filter(c=>(c.owner||"Mehdi")===u.name),names=new Set(cs.map(c=>c.name));
+    const acts=M.Jall.filter(r=>r.a&&r.a>=w0&&(r.by?r.by===u.name:names.has(r.s))).length;
+    const rdv=cs.filter(c=>c.statut==="RDV fixé").length,signed=cs.filter(c=>c.signe&&c.dsig&&c.dsig>=m0).reduce((n,c)=>n+c.signe,0),pot=cs.filter(c=>!["Gagné","Perdu"].includes(c.statut)).reduce((n,c)=>n+c.pot,0);
+    return{u,acts,rdv,signed,pot,pc:u.obj?Math.min(100,Math.round(signed/u.obj*100)):null}});
+  return `<div class="card team"><h3>👥 Mon équipe</h3><div class="hint">Semaine en cours et mois en cours</div>
+    <div class="team-rows">${rows.map(r=>`<div class="team-row">${av(r.u.name)}<div class="tr-main"><b>${esc(r.u.name)}</b><small>${r.acts} actions cette semaine · ${r.rdv} RDV fixés</small>${r.pc!==null?`<div class="mg-obj-bar light"><i style="width:${r.pc}%"></i></div>`:""}</div><div class="tr-fig"><b>${keur(r.signed)}</b><small>${r.pc!==null?r.pc+" % obj.":"signés"}</small></div></div>`).join("")||`<div class="empty">Aucun commercial dans l'onglet Utilisateurs.</div>`}</div></div>`;
+}
+function margeBase(){return isMgr()?M.Clist:M.ClistAll.filter(M.mine)}
 function margeData(){
   const t=today0(),m0=new Date(t.getFullYear(),t.getMonth(),1),p0=new Date(t.getFullYear(),t.getMonth()-1,1);
-  const won=M.Clist.filter(c=>c.signe&&c.dsig);
+  const base=margeBase(),won=base.filter(c=>c.signe&&c.dsig);
   const month=won.filter(c=>c.dsig>=m0).reduce((n,c)=>n+c.signe,0),prev=won.filter(c=>c.dsig>=p0&&c.dsig<m0).reduce((n,c)=>n+c.signe,0);
   const nWon=won.filter(c=>c.dsig>=m0).length;
-  const act=M.Clist.filter(c=>!["Gagné","Perdu"].includes(c.statut)&&c.pot);
-  return{month,prev,nWon,act,brut:act.reduce((n,c)=>n+c.pot,0),pond:act.reduce((n,c)=>n+c.pot*(PROBA[c.statut]??.1),0)};
+  const act=base.filter(c=>!["Gagné","Perdu"].includes(c.statut)&&c.pot);
+  const comMonth=won.filter(c=>c.dsig>=m0).reduce((n,c)=>n+c.signe*rateOf(c),0),comPrev=won.filter(c=>c.dsig>=p0&&c.dsig<m0).reduce((n,c)=>n+c.signe*rateOf(c),0);
+  return{month,prev,nWon,act,comMonth,comPrev,comBrut:act.reduce((n,c)=>n+c.pot*rateOf(c),0),brut:act.reduce((n,c)=>n+c.pot,0),pond:act.reduce((n,c)=>n+c.pot*(PROBA[c.statut]??.1),0)};
 }
-const COMM=0.16;
+let COMM=0.16;
 function margeTop(){
-  const d=margeData(),tab=S.mgTab||"marge",k=tab==="com"?COMM:1;
-  const t=today0(),won=M.Clist.filter(c=>c.signe&&c.dsig),ms=[];
-  for(let x=5;x>=0;x--){const a=new Date(t.getFullYear(),t.getMonth()-x,1),b=new Date(t.getFullYear(),t.getMonth()-x+1,1);ms.push([a,won.filter(c=>c.dsig>=a&&c.dsig<b).reduce((n,c)=>n+c.signe,0)*k])}
-  const cur=d.month*k,prev=d.prev*k,delta=prev?Math.round((cur-prev)/prev*100):null;
+  const d=margeData(),tab=S.mgTab||"marge",com=tab==="com",k=com?COMM:1;
+  const t=today0(),won=margeBase().filter(c=>c.signe&&c.dsig),ms=[];
+  for(let x=5;x>=0;x--){const a=new Date(t.getFullYear(),t.getMonth()-x,1),b=new Date(t.getFullYear(),t.getMonth()-x+1,1);ms.push([a,won.filter(c=>c.dsig>=a&&c.dsig<b).reduce((n,c)=>n+c.signe*(com?rateOf(c):1),0)])}
+  const cur=com?d.comMonth:d.month,prev=com?d.comPrev:d.prev,delta=prev?Math.round((cur-prev)/prev*100):null;
+  const team=isMgr()&&S.scope!=="moi",objM=team?(S.users||[]).filter(u=>u.role!=="Manager").reduce((n,u)=>n+(u.obj||0),0):(S.objectif||0),objC=team?(S.users||[]).filter(u=>u.role!=="Manager").reduce((n,u)=>n+(u.obj||0)*(u.rate||0),0):(S.objectif||0)*COMM;
   const mx=Math.max(1,...ms.map(m=>m[1])),W=340,H=90,pts=ms.map((m,x)=>[x*W/5,H-8-(m[1]/mx)*(H-20)]);
   let path=`M${pts[0][0]} ${pts[0][1]}`;for(let x=1;x<pts.length;x++){const [x0,y0]=pts[x-1],[x1,y1]=pts[x],cx=(x0+x1)/2;path+=` C${cx} ${y0} ${cx} ${y1} ${x1} ${y1}`}
   const last=pts[pts.length-1],mois=t.toLocaleDateString("fr-FR",{month:"long"}),pm=new Date(t.getFullYear(),t.getMonth()-1,1).toLocaleDateString("fr-FR",{month:"short"});
   return `<div class="mg-night">
     <div class="mg-head"><div class="mg-tabs" role="tablist"><button type="button" role="tab" data-mgtab="marge" aria-selected="${tab==="marge"}">Marge</button><button type="button" role="tab" data-mgtab="com" aria-selected="${tab==="com"}">Commission</button></div>
       ${delta!==null?`<span class="mg-badge ${delta<0?"down":""}">${delta>=0?"▲":"▼"} ${Math.abs(delta)} % vs ${esc(pm)}</span>`:""}</div>
-    <div class="mg-lbl">${tab==="com"?"Ta commission en ":"Signée en "}${esc(mois)}${tab==="com"?" (16 %)":""}</div>
+    <div class="mg-lbl">${com?(isMgr()?"Commissions de l'équipe en ":"Ta commission en "):(team?"Marge signée par l'équipe en ":"Signée en ")}${esc(mois)}${com&&!isMgr()?` (${Math.round(COMM*100)} %)`:""}</div>
     <div class="mg-big" data-count="${Math.round(cur)}" data-fmt="eur">${eur(cur)}</div>
     <svg class="mg-chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><g stroke="rgba(255,255,255,.08)"><line x1="0" y1="22" x2="${W}" y2="22"/><line x1="0" y1="50" x2="${W}" y2="50"/><line x1="0" y1="78" x2="${W}" y2="78"/></g>
       <path d="${path} L${W} ${H} L0 ${H}Z" fill="#FF5A47" fill-opacity=".16"/><path d="${path}" fill="none" stroke="#FF5A47" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
     <div class="mg-months">${ms.map(m=>`<span>${esc(m[0].toLocaleDateString("fr-FR",{month:"short"}))}</span>`).join("")}</div>
-    ${(()=>{const obj=(S.objectif||0)*k;if(!obj)return `<button type="button" class="mg-obj-set" data-setobj="1">🎯 Fixer mon objectif du mois</button>`;const pc=Math.min(100,Math.round(cur/obj*100)),rest=Math.max(0,obj-cur);
+    ${(()=>{const obj=com?objC:objM;if(!obj)return team?"":`<button type="button" class="mg-obj-set" data-setobj="1">🎯 Fixer mon objectif du mois</button>`;const pc=Math.min(100,Math.round(cur/obj*100)),rest=Math.max(0,obj-cur);
       return `<button type="button" class="mg-obj" data-setobj="1"><div class="mg-obj-top"><span>Objectif ${tab==="com"?"commission":"marge"} · ${eur(obj)}</span><b>${pc} %</b></div><div class="mg-obj-bar"><i style="width:${pc}%"></i></div><small>${rest?`Encore ${eur(rest)} à signer d'ici la fin du mois`:"Objectif atteint, bravo !"}</small></button>`})()}
-    <div class="mg-mini"><div class="a"><span>Potentiel</span><b>${keur(d.brut)}</b><small>${d.act.length?`dont ${keur(d.pond)} pondéré`:"Chiffre tes offres"}</small></div><div class="b"><span>Com. potentielle</span><b>${eur(d.brut*COMM)}</b><small>si tout signe</small></div></div>
+    <div class="mg-mini"><div class="a"><span>Potentiel</span><b>${keur(d.brut)}</b><small>${d.act.length?`dont ${keur(d.pond)} pondéré`:"Chiffre tes offres"}</small></div><div class="b"><span>Com. potentielle</span><b>${eur(d.comBrut)}</b><small>si tout signe</small></div></div>
   </div>`;
 }
 function margeCard(){
@@ -940,7 +1020,7 @@ function renderCall(){
 async function logAction(t,o){
   const c=M.C.get(t.company)||{};const nd=o.nextDate?fr(o.nextDate):"",nx=o.next||"",nt=nx?(o.nextTime||""):"";
   if(t.kind==="A")await setRange(`'Journal (base)'!E${t.row}:J${t.row}`,[[[norm(t.cr),o.cr].filter(Boolean).join(" "),o.res||"",nx,nd,nt,true]]);
-  else{const row=await nextFreeJournalRow();await setRange(`'Journal (base)'!A${row}:J${row}`,[[fr(today0()),t.company,t.contact||c.contact||"",L.types.includes(t.action)?t.action:"Appel téléphonique",o.cr,o.res||"",nx,nd,nt,true]])}
+  else{const row=await nextFreeJournalRow();await setRange(`'Journal (base)'!A${row}:K${row}`,[[fr(today0()),t.company,t.contact||c.contact||"",L.types.includes(t.action)?t.action:"Appel téléphonique",o.cr,o.res||"",nx,nd,nt,true,USER]])}
   if(o.statut&&c.row&&c.statut!==o.statut)await setRange(`Comptes!N${c.row}`,[[o.statut]]);
 }
 const EXPRESS=[["rdv","📅 RDV fixé"],["mail","✉️ Veut un mail"],["rappel","↻ Rappeler demain"],["nope","✕ Pas intéressé"]];
@@ -964,7 +1044,7 @@ async function runExpress(k,t,after){
 async function quickLog(t,res,cr,nextDate){
   const c=M.C.get(t.company)||{};const same=L.types.includes(t.action)?t.action:"Appel téléphonique";
   if(t.kind==="A")await setRange(`'Journal (base)'!E${t.row}:J${t.row}`,[[[norm(t.cr),cr].filter(Boolean).join(" "),res,same,fr(nextDate),"",true]]);
-  else{const row=await nextFreeJournalRow();await setRange(`'Journal (base)'!A${row}:J${row}`,[[fr(today0()),t.company,t.contact||c.contact||"",t.action,cr,res,same,fr(nextDate),"",true]])}
+  else{const row=await nextFreeJournalRow();await setRange(`'Journal (base)'!A${row}:K${row}`,[[fr(today0()),t.company,t.contact||c.contact||"",t.action,cr,res,same,fr(nextDate),"",true,USER]])}
 }
 function callNext(counted){if(!S.call)return;if(counted)S.call.doneCount++;S.call.i++;renderCall()}
 
@@ -983,7 +1063,7 @@ function render(){
   const banner=S.error?`<div class="banner"><strong>${esc(errorCopy(S.error,false)[0])}</strong><span>${esc(errorCopy(S.error,false)[1])}</span></div>`:"";
   const v={accueil:vAccueil,journee:vJournee,terrain:vTerrain,comptes:vComptes,pipeline:vPipeline,journal:vJournal}[S.view]||vAccueil;
   const changed=S._lastView!==S.view;S._lastView=S.view;
-  app.innerHTML=banner+v();
+  app.innerHTML=banner+scopeBar()+v();
   if(changed&&!RM){app.classList.remove("enter");void app.offsetWidth;app.classList.add("enter");[...app.children].forEach((el,i)=>el.style.setProperty("--d",Math.min(i,8)*45+"ms"));countUp(app)}
   if(S.view==="terrain")initMap();else if(MAP){try{MAP.remove()}catch(e){}MAP=null}
   openKeys.forEach(k=>{const d=document.getElementById(k);if(d)d.open=true});
@@ -1067,15 +1147,15 @@ function formAction(mode,task,company,after){
       const cr=val("f-cr"),ct=val("f-ct"),st=val("f-st"),res=pillVal("res"),nd=nD?fr(nD):"",time=next?nT:"";
       if(task&&task.kind==="A")await setRange(`'Journal (base)'!C${task.row}:J${task.row}`,[[ct,task.action,[norm(task.cr),cr].filter(Boolean).join(" "),res,next,nd,time,true]]);
       else{const row=await nextFreeJournalRow();const d=mode==="new"?(fromIso(val("f-date"))||today0()):today0();
-        await setRange(`'Journal (base)'!A${row}:J${row}`,[[fr(d),company,ct,mode==="new"?val("f-type"):task.action,cr,res,next,nd,time,true]])}
+        await setRange(`'Journal (base)'!A${row}:K${row}`,[[fr(d),company,ct,mode==="new"?val("f-type"):task.action,cr,res,next,nd,time,true,USER]])}
       if(compte&&st&&st!==compte.statut){try{await setRange(`Comptes!N${compte.row}`,[[st]])}catch(e){toast("Action enregistrée, statut non modifié.")}}
       if(compte&&st==="Gagné"&&compte.statut!=="Gagné"){closeSheet();if(after)after();await load();formWon(M.C.get(compte.name)||compte);return}
       closeSheet();toast("Enregistré dans ton CRM");if(after)after();await load();
     })});
 }
 function formObjectif(){
-  openSheet("Objectif du mois","Ta marge à signer chaque mois. La commission (16 %) est calculée automatiquement.",`${inp("o-val","Objectif de marge mensuel (€)",S.objectif||"",'inputmode="decimal"')}`,{save:"Enregistrer",onSave:()=>guard(async()=>{
-    const v=num(val("o-val"));await setRange("Listes!I2",[[v||""]]);S.objectif=v;closeSheet();toast(v?"Objectif fixé à "+eur(v):"Objectif retiré");render()})});
+  openSheet("Objectif du mois",`Ta marge à signer chaque mois. La commission (${Math.round(COMM*100)} %) est calculée automatiquement.`,`${inp("o-val","Objectif de marge mensuel (€)",S.objectif||"",'inputmode="decimal"')}`,{save:"Enregistrer",onSave:()=>guard(async()=>{
+    const v=num(val("o-val"));if(S.me&&S.me.row)await setRange(`Utilisateurs!E${S.me.row}`,[[v||""]]);else await setRange("Listes!I2",[[v||""]]);S.objectif=v;if(S.me)S.me.obj=v;closeSheet();toast(v?"Objectif fixé à "+eur(v):"Objectif retiré");render()})});
 }
 function formWon(c){
   openSheet("Affaire gagnée 🎉",c.name,`<div class="two">${inp("w-sig","Marge signée (€)",c.signe||c.pot||"",'inputmode="decimal"')}<div class="field"><label for="w-date">Date de signature</label><input type="date" id="w-date" value="${iso(c.dsig||today0())}"></div></div>
@@ -1103,6 +1183,7 @@ function compteFields(c,isNew){
   <div class="two"><div class="field"><label for="k-bes">Besoin</label>${sel("k-bes",L.besoins,c.besoin||"","—")}</div>${inp("k-pre","Prestataire actuel",c.presta)}</div>
   <div class="two"><div class="field"><label for="k-ech">Échéance contrat</label><input type="date" id="k-ech" value="${iso(parseDate(c.echeance))}"></div>
     <div class="field"><label for="k-vis">Date 1ère visite</label><input type="date" id="k-vis" value="${iso(parseDate(c.visite)||(isNew?today0():null))}"></div></div>
+  ${multi()?`<div class="field"><label for="k-own">Commercial</label><select id="k-own" ${isMgr()?"":"disabled"}>${(S.users||[]).map(u=>`<option ${(c.owner||USER)===u.name?"selected":""}>${esc(u.name)}</option>`).join("")}</select></div>`:""}
   <div class="two"><div class="field"><label for="k-pri">Priorité</label>${sel("k-pri",L.prios,c.prio||"","—")}</div><div class="field"><label for="k-st">Statut</label>${sel("k-st",L.statuts,c.statut||"À qualifier")}</div></div>
   <div class="field"><label for="k-com">Commentaire (ce qui a été dit)</label><textarea id="k-com">${esc(c.comment||"")}</textarea></div>
   <h4>Marge</h4>
@@ -1128,12 +1209,12 @@ function formCompte(mode){
         if(next&&!nD)return showErr("Choisis la date de la prochaine action.");
         if(!next&&nD)return showErr("Choisis le type de la prochaine action.");
         const fresh=await getRange(C_RANGE);let last=-1;fresh.forEach((r,i)=>{if(norm(r[0]))last=i});const row=last+4;
-        await setRange(`Comptes!A${row}:O${row}`,[compteValues(name)]);await setRange(`Comptes!W${row}:Y${row}`,[margeValues()]);
+        await setRange(`Comptes!A${row}:O${row}`,[compteValues(name)]);await setRange(`Comptes!W${row}:Z${row}`,[[...margeValues(),val("k-own")||USER]]);
         if(type||next){const jr=await nextFreeJournalRow();const vd=fromIso(val("k-vis"))||today0();
-          await setRange(`'Journal (base)'!A${jr}:J${jr}`,[[fr(type?vd:today0()),name,val("k-ct"),type||"",val("f-cr"),pillVal("res"),next,nD?fr(nD):"",next?nT:"",!!type]])}
+          await setRange(`'Journal (base)'!A${jr}:K${jr}`,[[fr(type?vd:today0()),name,val("k-ct"),type||"",val("f-cr"),pillVal("res"),next,nD?fr(nD):"",next?nT:"",!!type,USER]])}
         closeSheet();toast("Compte créé");S.fiche=name;await load();
       }else{
-        await setRange(`Comptes!B${c.row}:O${c.row}`,[compteValues(c.name).slice(1)]);await setRange(`Comptes!W${c.row}:Y${c.row}`,[margeValues()]);
+        await setRange(`Comptes!B${c.row}:O${c.row}`,[compteValues(c.name).slice(1)]);await setRange(`Comptes!W${c.row}:Z${c.row}`,[[...margeValues(),val("k-own")||c.owner||USER]]);
         closeSheet();toast("Fiche mise à jour");await load();
       }
     })});
@@ -1150,11 +1231,11 @@ function formJournal(rowNo){
     <label class="check"><input type="checkbox" id="e-done" ${r.done?"checked":""}> Action faite</label>`;
   openSheet("Corriger l'action",`Ligne ${r.row} du Journal`,body,{
     left:`<button type="button" class="btn danger left" data-del="1">Supprimer</button>`,
-    onDelete:btn=>{if(btn.dataset.confirm){guard(async()=>{await setRange(`'Journal (base)'!A${r.row}:J${r.row}`,[["","","","","","","","","",false]]);closeSheet();toast("Action supprimée");await load()})}else{btn.dataset.confirm="1";btn.textContent="Confirmer la suppression"}},
+    onDelete:btn=>{if(btn.dataset.confirm){guard(async()=>{await setRange(`'Journal (base)'!A${r.row}:K${r.row}`,[["","","","","","","","","",false,""]]);closeSheet();toast("Action supprimée");await load()})}else{btn.dataset.confirm="1";btn.textContent="Confirmer la suppression"}},
     onSave:()=>guard(async()=>{
       const d=fromIso(val("e-date")),nD=fromIso(val("n-date")),next=val("f-next");
       if(!val("e-co"))return showErr("Indique le compte.");
-      await setRange(`'Journal (base)'!A${r.row}:J${r.row}`,[[d?fr(d):"",val("e-co"),val("e-ct"),val("e-type"),val("e-cr"),pillVal("res"),next,nD?fr(nD):"",next?val("n-time"):"",$("#e-done").checked]]);
+      await setRange(`'Journal (base)'!A${r.row}:K${r.row}`,[[d?fr(d):"",val("e-co"),val("e-ct"),val("e-type"),val("e-cr"),pillVal("res"),next,nD?fr(nD):"",next?val("n-time"):"",$("#e-done").checked,r.by||USER]]);
       closeSheet();toast("Action corrigée");await load()})});
 }
 
@@ -1408,7 +1489,7 @@ async function markSent(j){
   const c=M.C.get(j.company)||{};const objet=val("m-obj")||j.objet;const nd=fr(addBiz(3));
   const cr=`Mail envoyé${c.email?" à "+c.email:""} : « ${objet} ».`;
   if(j.kind==="A")await setRange(`'Journal (base)'!E${j.row}:J${j.row}`,[[[norm(j.cr),cr].filter(Boolean).join(" "),"","Appel téléphonique",nd,"",true]]);
-  else{const row=await nextFreeJournalRow();await setRange(`'Journal (base)'!A${row}:J${row}`,[[fr(today0()),j.company,c.contact||"",j.action,cr,"","Appel téléphonique",nd,"",true]])}
+  else{const row=await nextFreeJournalRow();await setRange(`'Journal (base)'!A${row}:K${row}`,[[fr(today0()),j.company,c.contact||"",j.action,cr,"","Appel téléphonique",nd,"",true,USER]])}
 }
 document.addEventListener("click",async e=>{
   if(!M)return;
@@ -1485,7 +1566,7 @@ ${comptes}
 
 Listes du CRM. Types d'action : ${L.types.join(", ")}. Résultats : ${L.resultats.join(", ")}. Statuts : ${L.statuts.join(", ")}.`;
 }
-function rules(){return `Tu es l'assistant intégré à DealFlow, l'application CRM de Mehdi, Business Developer chez SRE Groupe. Tu es à la fois son coach commercial (techniques de vente modernes, traitement des objections, discours, closing, dans l'esprit des grands vendeurs) et son assistant CRM.
+function rules(){return `Tu es Claudia, l'assistante intégrée à DealFlow, l'application CRM de Mehdi, Business Developer chez SRE Groupe. Tu es à la fois son coach commercial (techniques de vente modernes, traitement des objections, discours, closing, dans l'esprit des grands vendeurs) et son assistant CRM.
 
 SRE Groupe : basé à Valbonne, 38 ans d'existence, plus de 900 références clients sur la Côte d'Azur. Accompagne les entreprises dans leur transition numérique. Audits gratuits et sans engagement sur la téléphonie et le réseau. Mise en conformité facture électronique (Factur-X). Parc d'impression avec une approche multimarque pour proposer la solution la plus adaptée à chaque structure. GED Zeendoc. Mobilier de bureau et équipement complet d'un bureau (fournitures, bureaux, écrans, postes). Mehdi est basé à Fréjus et développe le Var. N'écris jamais « entreprise varoise ».
 
@@ -1510,9 +1591,9 @@ function chatTools(acts){
    execute:async(i,ctx)=>{const c=findCompte(String(i.societe||""));if(!c)throw new Error("Compte introuvable : "+i.societe+". Il faut d'abord le créer dans Comptes.");
      const next=L.types.includes(i.prochaine_action)?i.prochaine_action:"",nd=next?toFr(i.date_prochaine):"";if(next&&!nd)throw new Error("Date de la prochaine action manquante ou illisible.");
      const row=await nextFreeJournalRow();if(ctx.signal.aborted)throw new Error("Annulé");
-     const vals=[toFr(i.date)||fr(today0()),c.name,norm(i.interlocuteur),L.types.includes(i.type)?i.type:String(i.type||""),norm(i.compte_rendu),L.resultats.includes(i.resultat)?i.resultat:"",next,nd,next?norm(i.heure_prochaine):"",true];
-     await setRange(`'Journal (base)'!A${row}:J${row}`,[vals]);
-     acts.push({label:`${vals[3]} enregistré pour ${c.name}${next?` · ${next} le ${nd}`:""}`,range:`'Journal (base)'!A${row}:J${row}`,prev:[["","","","","","","","","",false]]});
+     const vals=[toFr(i.date)||fr(today0()),c.name,norm(i.interlocuteur),L.types.includes(i.type)?i.type:String(i.type||""),norm(i.compte_rendu),L.resultats.includes(i.resultat)?i.resultat:"",next,nd,next?norm(i.heure_prochaine):"",true,USER];
+     await setRange(`'Journal (base)'!A${row}:K${row}`,[vals]);
+     acts.push({label:`${vals[3]} enregistré pour ${c.name}${next?` · ${next} le ${nd}`:""}`,range:`'Journal (base)'!A${row}:K${row}`,prev:[["","","","","","","","","",false,""]]});
      return`OK, ligne ${row} du Journal : ${vals.join(" | ")}`}},
   {name:"changer_statut",description:"Change le statut d'un compte dans Comptes.",
    inputSchema:{type:"object",properties:{societe:{type:"string"},statut:{type:"string",enum:L.statuts}},required:["societe","statut"]},
@@ -1532,19 +1613,19 @@ function renderChat(){
   const prev=root.querySelector(".chat-log"),atBottom=!prev||prev.scrollHeight-prev.scrollTop-prev.clientHeight<80;
   const draft=root.querySelector("#chat-txt")?root.querySelector("#chat-txt").value:"";
   const hadFocus=document.activeElement&&document.activeElement.id==="chat-txt";
-  root.innerHTML=`<div class="panel-wrap" data-closechat="1"><aside class="chat" role="dialog" aria-modal="true" aria-label="Assistant DealFlow">
-    <div class="panel-head"><div class="bar1"><div class="who"><span class="ai-fab" style="position:static;width:38px;height:38px;display:grid;box-shadow:none">${SPARK}</span><div class="who-t"><b style="font-family:var(--f-display);font-size:1.1rem">Assistant DealFlow</b><span class="meta">Ton coach et ton CRM, avec Claude</span></div></div>
-      <div class="actions">${CHAT.log.length?`<button class="btn sm" type="button" data-chatclear="1">Effacer</button>`:""}<button class="btn sm" type="button" data-closechat="1">Fermer</button></div></div></div>
+  root.innerHTML=`<div class="panel-wrap" data-closechat="1"><aside class="chat" role="dialog" aria-modal="true" aria-label="Claudia">
+    <div class="panel-head"><div class="bar1"><div class="who"><span class="ai-fab" style="position:static;width:38px;height:38px;display:grid;box-shadow:none">${SPARK}</span><div class="who-t"><b style="font-family:var(--f-display);font-size:1.1rem">Claudia</b><span class="meta">Ton assistante commerciale</span></div></div>
+      <div class="actions"><button class="btn sm cta" type="button" data-openclaudia="1">🎙 Note terrain</button>${CHAT.log.length?`<button class="btn sm" type="button" data-chatclear="1">Effacer</button>`:""}<button class="btn sm" type="button" data-closechat="1">Fermer</button></div></div></div>
     <div class="chat-log" id="chat-log">${CHAT.log.length?CHAT.log.map((m,mi)=>`<div class="msg ${m.role==="user"?"u":"a"}${m.err?" err":""}">${m.pending&&!m.text?`<span class="think">${esc(m.status||"Réflexion…")}</span>`:(m.role==="user"?esc(m.text):mdLite(m.text))}${m.pending&&m.text&&m.status?`\n<span class="think">${esc(m.status)}</span>`:""}</div>${(m.acts||[]).length?`<div class="msg-acts">${m.acts.map((a,ai)=>`<div class="act-chip ${a.undone?"undone":""}">✓ ${esc(a.label)}${a.range&&!a.undone?`<button type="button" data-undo="${mi}:${ai}">Annuler</button>`:""}</div>`).join("")}</div>`:""}`).join(""):`<div class="chat-empty"><b>Salut ${USER}, je t'écoute.</b><span>Raconte-moi tes actions, je les note dans ton CRM. Demande-moi un mail, une réponse à une objection ou tes priorités du jour.</span></div>`}</div>
     ${CHAT.log.length?"":`<div class="sugg">${SUGG.map(s=>`<button type="button" data-sugg="${esc(s)}">${esc(s)}</button>`).join("")}</div>`}
-    <form class="chat-in" id="chat-form"><textarea id="chat-txt" rows="1" placeholder="Écris à ton assistant…"></textarea>${CHAT.busy?`<button type="button" class="stop" data-chatstop="1">Stop</button>`:`<button type="submit">Envoyer</button>`}</form>
+    <form class="chat-in" id="chat-form"><textarea id="chat-txt" rows="1" placeholder="Écris à Claudia…"></textarea>${CHAT.busy?`<button type="button" class="stop" data-chatstop="1">Stop</button>`:`<button type="submit">Envoyer</button>`}</form>
   </aside></div>`;
   const ta=$("#chat-txt");ta.value=draft;if(hadFocus||!draft)ta.focus();
   const log=$("#chat-log");if(atBottom)log.scrollTop=log.scrollHeight;
 }
 async function sendChat(text){
   text=norm(text);if(!text||CHAT.busy||!M)return;
-  if(!sampleFn){toast("L'assistant n'est disponible que dans DealFlow ouvert dans Claude.");return}
+  if(!sampleFn){toast("Pour discuter avec Claudia, ouvre DealFlow dans Claude. Ici, utilise la Note terrain.");return}
   CHAT.log.push({role:"user",text});const msg={role:"assistant",text:"",pending:true,status:"Réflexion…",acts:[]};CHAT.log.push(msg);
   CHAT.busy=true;CHAT.ctl=new AbortController();const ta=$("#chat-txt");if(ta)ta.value="";renderChat();
   const hist=CHAT.log.filter(m=>m!==msg&&!m.err&&m.text).slice(-14).map(m=>({role:m.role==="user"?"user":"assistant",content:m.text}));
@@ -1566,7 +1647,7 @@ async function sendChat(text){
   if(msg.acts.length)load(false,true);
 }
 document.addEventListener("click",async e=>{
-  if(e.target.closest("[data-openchat]")){CHAT.open=true;renderChat();return}
+  if(e.target.closest("[data-openchat]")){if(!sampleFn){openClaudia();return}CHAT.open=true;renderChat();return}
   if(e.target.matches("[data-closechat]")){CHAT.open=false;renderChat();return}
   if(e.target.closest("[data-chatstop]")){if(CHAT.ctl)CHAT.ctl.abort();return}
   if(e.target.closest("[data-chatclear]")){if(CHAT.busy)return;CHAT.log=[];saveChat();renderChat();return}
@@ -1578,7 +1659,253 @@ document.addEventListener("submit",e=>{if(e.target.id==="chat-form"){e.preventDe
 document.addEventListener("keydown",e=>{if(e.target.id==="chat-txt"&&e.key==="Enter"&&!e.shiftKey&&window.matchMedia("(min-width:700px)").matches){e.preventDefault();sendChat(e.target.value)}if(e.key==="Escape"&&CHAT.open&&!$("#modal-root").innerHTML){CHAT.open=false;renderChat()}});
 (async()=>{try{sampleFn=window.claude&&window.claude.use?await window.claude.use("sample"):null}catch(e){sampleFn=null}
   if(sampleFn){$("#ai-top").hidden=false;$("#ai-fab").hidden=false;if(M)render()}})();
+function showAiButtons(){$("#ai-top").hidden=false;$("#ai-fab").hidden=false}
 
+
+/* ---------- Claudia : note terrain ---------- */
+const MIC='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>';
+const CLA={open:false,step:"in",text:"",items:[],err:"",remarks:"",ctl:null,res:null,rec:null};
+try{CLA.text=localStorage.getItem("df-cla")||""}catch(e){}
+function claKeep(){try{localStorage.setItem("df-cla",CLA.text||"")}catch(e){}}
+function claudiaOn(){return !!CFG}
+async function claudiaAsk(prompt,signal){
+  const j=await api("POST",{op:"ai",prompt});
+  if(signal&&signal.aborted)throw{code:"cancelled"};
+  return j.text||"";
+}
+function claPrompt(text){
+  const t=today0(),jour=t.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+  const comptes=(M.ClistAll||M.Clist).map(c=>c.name+(c.ville?" ("+c.ville+")":"")).join("\n");
+  return `Tu es Claudia, l'assistante de saisie de DealFlow, le CRM de ${USER}, commercial chez SRE Groupe (téléphonie, réseau, impression multimarque, GED Zeendoc, facture électronique, mobilier et équipement de bureau).
+${USER} te dicte une note en vrac sur sa prospection, souvent toute une tournée terrain. Ta mission est de la découper entreprise par entreprise et de préparer la saisie dans le CRM.
+
+Nous sommes le ${jour} (${fr(t)}).
+
+Réponds UNIQUEMENT avec un objet JSON valide, sans aucun texte avant ou après, sans balise de code, exactement de cette forme :
+{"prospects":[{"societe":"","existant":"","secteur":"","ville":"","adresse":"","contact":"","fonction":"","telephone":"","email":"","besoin":"","prestataire":"","echeance":"","priorite":"","statut":"","commentaire":"","action":{"type":"","date":"","interlocuteur":"","compte_rendu":"","resultat":""},"prochaine":{"type":"","date":"","heure":""}}],"remarques":""}
+
+Règles :
+- Un objet par entreprise citée, dans l'ordre de la note.
+- "existant" : si l'entreprise correspond à un compte de la liste ci-dessous, même avec une faute d'orthographe ou une erreur de dictée, recopie son nom EXACT tel qu'il est écrit dans la liste. Sinon laisse vide.
+- N'invente jamais rien. Ce qui n'est pas dit reste une chaîne vide.
+- Toutes les dates au format JJ/MM/AAAA. Convertis les dates relatives à partir d'aujourd'hui (« jeudi » = le prochain jeudi, « dans 15 jours », « la semaine prochaine » = lundi prochain, « début 2027 » = le premier lundi de janvier 2027). Pour une échéance de contrat donnée en mois, prends le 1er du mois.
+- "besoin" parmi : ${L.besoins.join(", ")}. Plusieurs besoins = "Multi-besoins".
+- "statut" parmi : ${L.statuts.join(", ")}, seulement si c'est clair (intéressé = Intéressé, pas intéressé ou fermé = Perdu, rendez-vous pris = RDV fixé, à revoir plus tard = En veille). Sinon vide.
+- "priorite" parmi : ${L.prios.join(", ")}, selon l'intérêt exprimé, sinon vide.
+- "action" = ce que ${USER} a FAIT. "type" parmi : ${L.types.join(", ")}. Pour une visite sur place, mets "Visite physique". Date d'aujourd'hui par défaut. "resultat" parmi : ${L.resultats.join(", ")}.
+- "compte_rendu" : deux ou trois phrases courtes et factuelles de ce qui s'est dit, sans formule.
+- "commentaire" : l'essentiel à retenir sur le compte en une phrase (contexte, parc actuel, nombre de postes, irritants).
+- "prochaine" : la suite à donner. "type" parmi : ${L.types.join(", ")}. S'il faut rappeler, relancer ou repasser sans date précise, mets 3 jours ouvrés après aujourd'hui, soit le ${fr(addBiz(3))}. « Transmettre à Valérie » = "Transfert à Valérie". Si un rendez-vous est pris, type "RDV découverte" avec sa date et son heure (HH:MM). Si aucune suite n'est dite, laisse vide.
+- "telephone" au format 06 12 34 56 78.
+- "remarques" : ce que tu n'as pas pu rattacher à une entreprise, sinon vide.
+
+Comptes déjà dans le CRM :
+${comptes||"(aucun)"}
+
+Note de ${USER} :
+"""
+${text}
+"""`;
+}
+function claParse(raw){
+  let t=String(raw||"").replace(/```(?:json)?/gi,"").trim();
+  const a=t.indexOf("{"),b=t.lastIndexOf("}");if(a<0||b<a)throw{code:"parse",message:"Claudia n'a pas renvoyé de réponse exploitable. Réessaie."};
+  let j;try{j=JSON.parse(t.slice(a,b+1))}catch(e){throw{code:"parse",message:"Claudia n'a pas renvoyé de réponse exploitable. Réessaie."}}
+  const list=Array.isArray(j)?j:Array.isArray(j.prospects)?j.prospects:[];
+  return{items:list.filter(p=>p&&(p.societe||p.existant)).map(claItem),remarks:norm(j.remarques||"")};
+}
+function claMatch(name){
+  const all=M.ClistAll||M.Clist,n=low(name);if(!n)return null;
+  let c=all.find(x=>low(x.name)===n);if(c)return c;
+  if(n.length<4)return null;
+  const m=all.filter(x=>low(x.name).includes(n)||n.includes(low(x.name)));return m.length===1?m[0]:null;
+}
+function claItem(p){
+  const s=x=>norm(x==null?"":String(x)),pick=(v,list)=>{v=s(v);return v?(list.find(o=>low(o)===low(v))||""):""};
+  const a=p.action||{},n=p.prochaine||{};
+  const m=claMatch(s(p.existant))||claMatch(s(p.societe));
+  return{on:true,match:m?m.name:"",name:m?m.name:s(p.societe||p.existant),
+    f:{secteur:s(p.secteur),ville:s(p.ville),adresse:s(p.adresse),contact:s(p.contact),fonction:s(p.fonction),tel:s(p.telephone),email:s(p.email),
+       besoin:pick(p.besoin,L.besoins),presta:s(p.prestataire),echeance:toFr(p.echeance),prio:pick(p.priorite,L.prios),statut:pick(p.statut,L.statuts),comment:s(p.commentaire)},
+    a:{type:pick(a.type,L.types),date:toFr(a.date)||fr(today0()),who:s(a.interlocuteur)||s(p.contact),cr:s(a.compte_rendu),res:pick(a.resultat,L.resultats)},
+    n:{type:pick(n.type,L.types),date:toFr(n.date),time:/^\d{1,2}[:h]\d{2}$/.test(s(n.heure))?s(n.heure).replace("h",":"):""}};
+}
+const CLA_F=[["secteur","Secteur"],["ville","Ville"],["adresse","Adresse"],["contact","Contact"],["fonction","Fonction"],["tel","Téléphone"],["email","Email"],["besoin","Besoin"],["presta","Prestataire actuel"],["echeance","Échéance contrat"],["prio","Priorité"],["statut","Statut"],["comment","Commentaire"]];
+const CLA_COL={secteur:1,ville:2,adresse:3,contact:5,fonction:6,tel:7,email:8,besoin:9,presta:10,echeance:11,prio:12,statut:13,comment:14};
+function claCur(it,k){const c=it.match&&(M.ClistAll||M.Clist).find(x=>x.name===it.match);if(!c)return"";const map={tel:"tel",presta:"presta",prio:"prio",comment:"comment"};return norm(c[map[k]||k]||"")}
+function claField(i,it,k,lbl){
+  const v=it.f[k]||"",id=`c${i}-${k}`,cur=claCur(it,k);
+  let ctl;
+  if(k==="besoin")ctl=sel(id,L.besoins,v,"—");else if(k==="prio")ctl=sel(id,L.prios,v,"—");else if(k==="statut")ctl=sel(id,L.statuts,v,it.match?"Inchangé":"À qualifier");
+  else if(k==="secteur")ctl=sel(id,L.secteurs,v,"—");else if(k==="echeance")ctl=`<input type="date" id="${id}" value="${iso(parseDate(v))}">`;
+  else if(k==="comment")ctl=`<textarea id="${id}" style="min-height:60px">${esc(v)}</textarea>`;
+  else ctl=`<input id="${id}" value="${esc(v)}" ${k==="tel"?'inputmode="tel"':k==="email"?'inputmode="email"':""} autocomplete="off">`;
+  const was=it.match&&v&&cur&&low(cur)!==low(v)?`<span class="cla-was">Actuel · ${esc(cut(cur,60))}${k==="comment"?" (ta note sera ajoutée à la suite)":""}</span>`:"";
+  return `<div class="field"${k==="comment"||k==="adresse"?' style="grid-column:1/-1"':""}><label for="${id}">${lbl}</label>${ctl}${was}</div>`;
+}
+function claCard(it,i){
+  const all=M.ClistAll||M.Clist,same=k=>{const c=claCur(it,k),v=it.f[k]||"";return k==="tel"?c.replace(/\D/g,"")===v.replace(/\D/g,""):low(c)===low(v)},shown=CLA_F.filter(([k])=>!it.match||it.full||(it.f[k]&&!same(k)));
+  return `<div class="cla-card ${it.on?"":"off"}">
+    <div class="cla-h"><input type="checkbox" data-claon="${i}" ${it.on?"checked":""} aria-label="Enregistrer ${esc(it.name)}">
+      <div class="cla-t"><input class="cla-name" id="c${i}-name" value="${esc(it.name)}" ${it.match?"readonly":""} aria-label="Nom de la société">
+        <span class="cla-tag ${it.match?"upd":"new"}">${it.match?"Compte existant · mise à jour":"Nouveau compte"}</span>
+        <select data-clamatch="${i}" aria-label="Rattacher à un compte"><option value="">➕ Créer un nouveau compte</option>${all.map(c=>`<option ${c.name===it.match?"selected":""} value="${esc(c.name)}">${esc(c.name)}</option>`).join("")}</select></div></div>
+    <div class="cla-b">
+      <h4>${it.match?"Ce qui change sur la fiche":"La fiche"}</h4>
+      ${shown.length?`<div class="two">${shown.map(([k,l])=>claField(i,it,k,l)).join("")}</div>`:`<span class="mail">Rien de nouveau sur la fiche.</span>`}
+      ${it.match&&!it.full?`<button class="lnk" type="button" data-clafull="${i}" style="align-self:flex-start">+ Modifier d'autres champs</button>`:""}
+      <h4>Action réalisée</h4>
+      <div class="two"><div class="field"><label for="c${i}-at">Type</label>${sel(`c${i}-at`,L.types,it.a.type,"Aucune")}</div>
+        <div class="field"><label for="c${i}-ad">Date</label><input type="date" id="c${i}-ad" value="${iso(parseDate(it.a.date))}"></div>
+        <div class="field"><label for="c${i}-aw">Interlocuteur</label><input id="c${i}-aw" value="${esc(it.a.who)}"></div>
+        <div class="field"><label for="c${i}-ar">Résultat</label>${sel(`c${i}-ar`,L.resultats,it.a.res,"—")}</div>
+        <div class="field" style="grid-column:1/-1"><label for="c${i}-ac">Compte rendu</label><textarea id="c${i}-ac" style="min-height:70px">${esc(it.a.cr)}</textarea></div></div>
+      <h4>Prochaine action</h4>
+      <div class="two"><div class="field"><label for="c${i}-nt">Type</label>${sel(`c${i}-nt`,L.types,it.n.type,"Aucune")}</div>
+        <div class="field"><label for="c${i}-nd">Date</label><input type="date" id="c${i}-nd" value="${iso(parseDate(it.n.date))}"></div>
+        <div class="field"><label for="c${i}-nh">Heure</label><input type="time" id="c${i}-nh" value="${esc(it.n.time)}"></div></div>
+    </div></div>`;
+}
+function claRead(){
+  if(CLA.step!=="review")return;
+  CLA.items.forEach((it,i)=>{
+    const g=id=>{const el=document.getElementById(`c${i}-${id}`);return el?norm(el.value):null};
+    const nm=g("name");if(nm!=null&&!it.match)it.name=nm;
+    CLA_F.forEach(([k])=>{let v=g(k);if(v==null)return;if(k==="echeance"){const d=fromIso(v);v=d?fr(d):""}it.f[k]=v});
+    const dd=x=>{const d=fromIso(x||"");return d?fr(d):""};
+    if(g("at")!=null){it.a.type=g("at");it.a.date=dd(g("ad"))||fr(today0());it.a.who=g("aw");it.a.res=g("ar");it.a.cr=g("ac");
+      it.n.type=g("nt");it.n.date=dd(g("nd"));it.n.time=g("nh")}
+  });
+}
+function renderClaudia(){
+  const root=$("#cla-root");if(!CLA.open){root.innerHTML="";return}
+  const sc=root.querySelector(".panel"),top=sc?sc.scrollTop:0;
+  const n=CLA.items.filter(x=>x.on).length;
+  let body="",foot="";
+  if(CLA.step==="in"){
+    const sr=!!(window.SpeechRecognition||window.webkitSpeechRecognition);
+    body=`<div class="cla-tip"><b>Raconte ta tournée comme tu me la raconterais.</b> Pour chaque entreprise, dis si tu peux le nom et la ville, la personne rencontrée et son numéro, ce qu'ils ont aujourd'hui, ce qui les intéresse et la suite à donner. ${sr?"Touche « Dicter » ou le micro":"Touche le micro"} du clavier de ton iPhone pour parler.</div>
+      <div class="field"><label for="cla-txt">Ta note</label><textarea id="cla-txt" class="cla-note" placeholder="Ex. Passé chez Garage Martin à Fréjus, vu le gérant Paul Martin au 06 12 34 56 78, copieur Canon jusqu'en juin 2027, intéressé par la téléphonie, à rappeler jeudi. Ensuite boulangerie Le Fournil à Saint-Raphaël, pas intéressés…">${esc(CLA.text)}</textarea></div>
+      ${CLA.err?`<div class="err">${esc(CLA.err)}</div>`:""}`;
+    foot=`${sr?`<button class="btn cla-mic ${CLA.rec?"rec":""}" type="button" data-clamic="1">${MIC}${CLA.rec?"Arrêter":"Dicter"}</button>`:""}<button class="btn cta" type="button" data-clago="1" ${norm(CLA.text).length<8?"disabled":""}>Analyser ma note</button>`;
+  }else if(CLA.step==="load"){
+    body=`<div class="cla-load"><span class="cla-dot">${SPARK}</span><b>Claudia lit ta note…</b><span>Elle sépare chaque entreprise, retrouve les comptes existants et prépare les relances.</span></div>`;
+    foot=`<button class="btn" type="button" data-clastop="1">Annuler</button>`;
+  }else if(CLA.step==="review"||CLA.step==="saving"){
+    body=`<div class="cla-tip"><b>${plural(CLA.items.length,"entreprise trouvée","entreprises trouvées")}.</b> Vérifie, corrige si besoin, décoche ce que tu ne veux pas enregistrer.</div>
+      ${CLA.items.map(claCard).join("")}
+      ${CLA.remarks?`<div class="cla-tip"><b>Non classé · </b>${esc(CLA.remarks)}</div>`:""}
+      ${CLA.err?`<div class="err">${esc(CLA.err)}</div>`:""}`;
+    foot=`<button class="btn" type="button" data-claback="1" ${CLA.step==="saving"?"disabled":""}>Modifier la note</button><button class="btn cta" type="button" data-clasave="1" ${n&&CLA.step!=="saving"?"":"disabled"}>${CLA.step==="saving"?"Enregistrement…":`Tout enregistrer (${n})`}</button>`;
+  }else if(CLA.step==="done"){
+    const r=CLA.res||{};
+    body=`<div class="cla-sum"><span class="big">✅</span><b>C'est dans ton CRM</b><span>${[r.nNew?plural(r.nNew,"compte créé","comptes créés"):"",r.nUpd?plural(r.nUpd,"fiche mise à jour","fiches mises à jour"):"",r.nAct?plural(r.nAct,"action enregistrée","actions enregistrées"):"",r.nNext?plural(r.nNext,"relance planifiée","relances planifiées"):""].filter(Boolean).join(" · ")||"Rien à enregistrer"}</span></div>`;
+    foot=`<button class="btn" type="button" data-claclose="1">Fermer</button><button class="btn cta" type="button" data-clanew="1">Nouvelle note</button>`;
+  }
+  const still=!!sc;
+  root.innerHTML=`<div class="panel-wrap${still?" still":""}" data-claclose="1"><aside class="panel" role="dialog" aria-modal="true" aria-label="Claudia, note terrain">
+    <div class="panel-head"><div class="bar1"><div class="who"><span class="cla-dot" style="width:40px;height:40px;animation:none">${SPARK}</span><div class="who-t"><b style="font-family:var(--f-display);font-size:1.15rem">Claudia</b><span class="meta">Note terrain · je remplis, tu valides</span></div></div>
+      <div class="actions"><button class="btn sm" type="button" data-claclose="1">Fermer</button></div></div></div>
+    <div class="panel-body" style="flex:1">${body}</div>
+    <div class="cla-foot">${foot}</div></aside></div>`;
+  const p=root.querySelector(".panel");if(p&&CLA.step==="review")p.scrollTop=top;
+}
+function openClaudia(){if(!M)return;CLA.open=true;if(CLA.step==="done"){CLA.step="in";CLA.items=[]}renderClaudia();const ta=$("#cla-txt");if(ta&&!CLA.text)setTimeout(()=>ta.focus(),60)}
+function claStopRec(){if(CLA.rec){try{CLA.rec.stop()}catch(e){}CLA.rec=null}}
+function claMic(){
+  if(CLA.rec){claStopRec();renderClaudia();return}
+  const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R)return;
+  const ta=$("#cla-txt");CLA.text=ta?ta.value:CLA.text;
+  let base=CLA.text?CLA.text.replace(/\s*$/," "):"";
+  const r=new R();r.lang="fr-FR";r.continuous=true;r.interimResults=true;
+  r.onresult=e=>{let fin="",tmp="";for(let k=e.resultIndex;k<e.results.length;k++){const t=e.results[k][0].transcript;if(e.results[k].isFinal)fin+=t;else tmp+=t}
+    if(fin){base+=fin.trim()+" "}CLA.text=base+tmp;const el=$("#cla-txt");if(el){el.value=CLA.text;el.scrollTop=el.scrollHeight}const go=document.querySelector("[data-clago]");if(go)go.disabled=norm(CLA.text).length<8;claKeep()};
+  r.onerror=e=>{CLA.rec=null;renderClaudia();if(e&&e.error&&e.error!=="aborted"&&e.error!=="no-speech")toast("Micro indisponible ici. Utilise le micro du clavier de ton iPhone.")};
+  r.onend=()=>{if(CLA.rec===r){CLA.rec=null;renderClaudia()}};
+  try{r.start();CLA.rec=r;renderClaudia()}catch(e){toast("Micro indisponible ici. Utilise le micro du clavier de ton iPhone.")}
+}
+async function claGo(){
+  const ta=$("#cla-txt");if(ta)CLA.text=ta.value;claKeep();claStopRec();
+  const text=norm(CLA.text);if(text.length<8)return;
+  CLA.err="";CLA.step="load";const ctl=CLA.ctl=new AbortController();renderClaudia();
+  try{
+    const raw=await claudiaAsk(claPrompt(text.slice(0,20000)),ctl.signal);
+    if(ctl.signal.aborted)return;
+    const r=claParse(raw);
+    if(!r.items.length)throw{message:"Claudia n'a trouvé aucune entreprise dans ta note. Précise au moins le nom de chaque société."};
+    CLA.items=r.items;CLA.remarks=r.remarks;CLA.step="review";
+  }catch(e){
+    if(ctl.signal.aborted)return;
+    CLA.step="in";
+    const c=e&&e.code;
+    CLA.err=c==="cancelled"?"":c==="rate_limited"?"Trop de demandes en peu de temps. Réessaie dans une minute.":(e&&e.message)||"Claudia n'a pas pu analyser ta note. Réessaie.";
+  }
+  CLA.ctl=null;renderClaudia();
+}
+async function claSaveAll(){
+  claRead();CLA.err="";
+  const items=CLA.items.filter(x=>x.on);if(!items.length)return;
+  const all=M.ClistAll||M.Clist;
+  for(const it of items){
+    if(!it.name){CLA.err="Une des fiches n'a pas de nom de société.";return renderClaudia()}
+    if(!it.match&&all.some(c=>low(c.name)===low(it.name))){it.match=all.find(c=>low(c.name)===low(it.name)).name}
+    if(it.n.type&&!it.n.date){CLA.err=`Choisis la date de la prochaine action pour ${it.name}.`;return renderClaudia()}
+  }
+  CLA.step="saving";renderClaudia();
+  const res={nNew:0,nUpd:0,nAct:0,nNext:0};
+  try{
+    const fresh=await getRange(C_RANGE);let last=-1;fresh.forEach((r,i)=>{if(norm(r[0]))last=i});let crow=last+4;
+    let jrow=await nextFreeJournalRow();
+    for(const it of items){
+      const f=it.f;
+      if(!it.match){
+        const vis=it.a.type==="Visite physique"?it.a.date:"";
+        await setRange(`Comptes!A${crow}:O${crow}`,[[it.name,f.secteur,f.ville,f.adresse,vis,f.contact,f.fonction,telOut(f.tel),f.email,f.besoin,f.presta,f.echeance,f.prio,f.statut||"À qualifier",f.comment]]);
+        await setRange(`Comptes!W${crow}:Z${crow}`,[["","","",USER]]);crow++;res.nNew++;
+      }else{
+        const c=all.find(x=>x.name===it.match);
+        const raw=(fresh[c.row-3]||[]).slice(0,15).map(x=>x==null?"":String(x));while(raw.length<15)raw.push("");
+        let ch=false;
+        for(const k in CLA_COL){const j=CLA_COL[k];let v=f[k];if(!v)continue;
+          if(k==="tel"){if(v.replace(/\D/g,"")===raw[j].replace(/\D/g,""))continue}
+          else if(low(v)===low(raw[j]))continue;
+          if(k==="comment"&&raw[j])v=raw[j]+"\n"+fr(today0())+" · "+v;
+          raw[j]=v;ch=true}
+        if(ch){raw[7]=telOut(raw[7]);await setRange(`Comptes!B${c.row}:O${c.row}`,[raw.slice(1)]);res.nUpd++}
+      }
+      if(it.a.type||it.n.type){
+        await setRange(`'Journal (base)'!A${jrow}:K${jrow}`,[[it.a.type?it.a.date:fr(today0()),it.name,it.a.who,it.a.type,it.a.cr,it.a.type?it.a.res:"",it.n.type,it.n.type?it.n.date:"",it.n.type?it.n.time:"",!!it.a.type,USER]]);
+        jrow++;if(it.a.type)res.nAct++;if(it.n.type)res.nNext++;
+      }
+      it.on=false;it.saved=true;
+    }
+    CLA.res=res;CLA.step="done";CLA.text="";claKeep();renderClaudia();if(!RM)confetti();
+  }catch(e){
+    const left=CLA.items.filter(x=>x.on).length;CLA.items.forEach(x=>{if(!x.saved&&items.includes(x))x.on=true});
+    CLA.step="review";CLA.err=errorCopy(e,true).join(". ")+(res.nNew+res.nUpd+res.nAct?` Déjà enregistré · ${res.nNew+res.nUpd} fiche(s), ${res.nAct} action(s). Les entreprises encore cochées restent à enregistrer.`:"");
+    CLA.items=CLA.items.filter(x=>!x.saved);renderClaudia();
+  }
+  load(false,true);
+}
+document.addEventListener("click",e=>{
+  if(e.target.closest("[data-openclaudia]")){e.preventDefault();if(CHAT.open){CHAT.open=false;renderChat()}openClaudia();return}
+  if(!CLA.open)return;
+  if(e.target.matches("[data-claclose]")){if(CLA.step==="saving")return;claRead();claStopRec();if(CLA.ctl)CLA.ctl.abort();const ta=$("#cla-txt");if(ta){CLA.text=ta.value;claKeep()}CLA.open=false;renderClaudia();return}
+  if(e.target.closest("[data-clamic]")){claMic();return}
+  if(e.target.closest("[data-clago]")){claGo();return}
+  if(e.target.closest("[data-clastop]")){if(CLA.ctl)CLA.ctl.abort();CLA.ctl=null;CLA.step="in";renderClaudia();return}
+  if(e.target.closest("[data-claback]")){claRead();CLA.step="in";CLA.err="";renderClaudia();return}
+  if(e.target.closest("[data-clasave]")){claSaveAll();return}
+  if(e.target.closest("[data-clanew]")){CLA.step="in";CLA.items=[];CLA.text="";CLA.err="";renderClaudia();return}
+  const fu=e.target.closest("[data-clafull]");if(fu){claRead();CLA.items[+fu.dataset.clafull].full=true;renderClaudia();return}
+});
+document.addEventListener("change",e=>{
+  if(!CLA.open)return;
+  const on=e.target.closest("[data-claon]");if(on){claRead();CLA.items[+on.dataset.claon].on=on.checked;renderClaudia();return}
+  const m=e.target.closest("[data-clamatch]");if(m){claRead();const it=CLA.items[+m.dataset.clamatch];it.match=m.value;if(m.value)it.name=m.value;renderClaudia();return}
+});
+document.addEventListener("input",e=>{if(e.target.id==="cla-txt"){CLA.text=e.target.value;claKeep();const go=document.querySelector("[data-clago]");if(go)go.disabled=norm(CLA.text).length<8}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&CLA.open&&CLA.step!=="saving"){claRead();claStopRec();CLA.open=false;renderClaudia()}});
 
 /* ---------- web : connexion, réglages, GPS ---------- */
 function showSetup(err,draft){
@@ -1596,7 +1923,7 @@ function showSetup(err,draft){
     if(!/^https:\/\/script\.google\.com\/.+\/exec$/.test(url))return showSetup("Le lien doit commencer par https://script.google.com/ et finir par /exec.",{url,token});
     if(!token)return showSetup("Entre ton code secret.",{url,token});
     CFG={url,token};$("#cfg-go").disabled=true;$("#cfg-go").textContent="Vérification…";
-    try{await getRange("Listes!I2");try{localStorage.setItem("df-cfg",JSON.stringify(CFG))}catch(e){};mcp=true;startGeo();render();load()}
+    try{await getRange("Listes!I2");try{localStorage.setItem("df-cfg",JSON.stringify(CFG))}catch(e){};mcp=true;startGeo();showAiButtons();render();load()}
     catch(e){CFG=null;showSetup(e.code==="badtoken"?"Code secret incorrect.":e.message||"Connexion impossible.",{url,token})}
   };
 }
@@ -1613,12 +1940,12 @@ function startGeo(){
 document.addEventListener("click",e=>{if(e.target.closest("[data-settings]")){showSetup()}});
 /* ---------- boot ---------- */
 const h=(location.hash||"").slice(1);
-try{const cc=JSON.parse(localStorage.getItem("df-cache")||"null");if(cc&&cc.j&&cc.c){S.journal=cc.j;S.comptes=cc.c;if(cc.L)L=cc.L;S.objectif=cc.o||0;S.loaded=true;S.cached=true;S.fetchedAt=new Date(cc.t)}}catch(e){}
+try{const cc=JSON.parse(localStorage.getItem("df-cache")||"null");if(cc&&cc.j&&cc.c){S.journal=cc.j;S.comptes=cc.c;if(cc.L)L=cc.L;S.objectif=cc.o||0;S.users=cc.u||[];S.me=cc.me||null;applyMe();S.loaded=true;S.cached=true;S.fetchedAt=new Date(cc.t)}}catch(e){}
 if(VIEWS.some(v=>v[0]===h))S.view=h;else{try{const s=localStorage.getItem("cp-view");if(VIEWS.some(v=>v[0]===s))S.view=s}catch(e){}}
 render();
 (async()=>{
   if(!CFG){showSetup();return}
-  mcp=true;startGeo();
+  mcp=true;startGeo();showAiButtons();
   load();
 })();
 })();
